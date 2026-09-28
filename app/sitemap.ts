@@ -1,0 +1,3 @@
+import {db,seed} from '@/lib/server';
+import {destinations} from '@/lib/data';
+export default async function sitemap(){let articles:any[]=[];try{await seed();articles=(await db().prepare('SELECT slug,updated FROM articles WHERE published=1').all()).results}catch{}const base='https://ccm-shipping.still-grass-4873.chatgpt.site';return ['', '/about','/global-reach','/contact','/rates','/track','/fcl-shipping-egypt','/lcl-shipping-egypt','/inland-transportation','/guides','/blog','/shipping-from-sokhna-port','/shipping-egypt-to-jeddah','/shipping-egypt-to-jebel-ali',...articles.map(a=>'/blog/'+a.slug)].map(path=>({url:base+path,changeFrequency:'weekly' as const,priority:path===''?1:.7}))}

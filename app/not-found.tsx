@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="wrap content"><h1 style={{fontSize:32}}>Page not found</h1><p className="muted" style={{margin:'15px 0'}}>The page you’re looking for is unavailable.</p><a href="/" className="btn">Back to CCM</a></main>}

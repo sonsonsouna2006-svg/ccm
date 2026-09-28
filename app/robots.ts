@@ -1,0 +1,1 @@
+export default function robots(){return {rules:{userAgent:'*',allow:'/',disallow:['/admin','/dashboard','/api','/login','/register']},sitemap:'https://ccm-shipping.still-grass-4873.chatgpt.site/sitemap.xml'}}
